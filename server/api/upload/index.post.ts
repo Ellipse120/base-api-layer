@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
   // Get storage instance
   const storage = useStorage(uploadStorageSymbol)
-  const uploadedFiles = []
+  const uploadedFiles: UploadedFiles[] = []
 
   try {
     for (const file of formData) {

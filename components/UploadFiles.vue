@@ -2,7 +2,7 @@
 // const uploadTemplateRef = useTemplateRef('uploadRef')
 const { $api } = useNuxtApp()
 
-const files = ref([])
+const files = ref()
 const formData = new FormData()
 
 const handleFilesChange = (event: Event) => {
@@ -24,7 +24,7 @@ const handleUpload = async () => {
     files.value = []
     formData.delete('file')
   })
-  files.value = res.files
+  files.value = res?.files
 }
 </script>
 
