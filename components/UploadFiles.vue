@@ -30,6 +30,7 @@ const handleUpload = async () => {
 
 <template>
 <div>
+  <div>Upload Files</div>
   <input ref="uploadRef" type="file" name="files" multiple @change="handleFilesChange($event)">
 
   <button @click="handleUpload">upload</button>
