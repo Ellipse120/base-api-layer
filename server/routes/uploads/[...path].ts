@@ -13,6 +13,5 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  console.log(decodeURIComponent(path))
   return await storage.getItemRaw(decodeURIComponent(path))
 })

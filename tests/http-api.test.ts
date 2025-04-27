@@ -5,6 +5,16 @@ import path from 'node:path'
 
 const dirPath = 'public/uploads'
 
+async function deleteAllFiles (dir: string) {
+  // clear temp uploaded files
+  const files = await fs.readdir(dir)
+  const deleteFilePromises = files.map(file =>
+    fs.unlink(path.join(dir, file)),
+  );
+
+  await Promise.all(deleteFilePromises)
+}
+
 describe('Http API', () => {
   test('Upload Files', async () => {
     await setup({
@@ -21,13 +31,7 @@ describe('Http API', () => {
     const responseFiles = await res.json()
     assert.hasAnyKeys(responseFiles.files[0], ['filename', 'url'], 'Should return the uploaded file info')
     onTestFinished(async () => {
-      // clear temp uploaded files
-      const files = await fs.readdir(dirPath)
-      const deleteFilePromises = files.map(file =>
-        fs.unlink(path.join(dirPath, file)),
-      );
-
-      await Promise.all(deleteFilePromises)
+      await deleteAllFiles(dirPath)
     })
   })
 })
