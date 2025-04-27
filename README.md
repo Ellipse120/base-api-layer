@@ -2,7 +2,25 @@
 
 Collect commonly used tools in nuxt layer.
 
-## Setup
+## How to use nuxt layer
+
+1. add to dev dependency
+
+```bash
+pnpm add -D @lusai/base-api-layer
+```
+
+2. add to `nuxt.config.ts`
+
+```ts
+extends: [
+  '@lusai/base-api-layer'
+]
+```
+
+---
+
+## Setup Dev Env
 
 Make sure to install the dependencies:
 
