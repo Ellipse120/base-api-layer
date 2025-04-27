@@ -1,5 +1,5 @@
 {
-  "name": "base-api-layer",
+  "name": "@lusai/base-api-layer",
   "type": "module",
   "version": "0.0.1",
   "main": "./nuxt.config.ts",
@@ -26,5 +26,23 @@
     "vitest": "^3.1.2",
     "vue": "latest"
   },
-  "packageManager": "pnpm@9.1.2+sha1.907f57a52517de34399d66401bf220a549e47b57"
+  "packageManager": "pnpm@9.1.2+sha1.907f57a52517de34399d66401bf220a549e47b57",
+  "description": "A nuxt layer that collecting commonly used server api, utils, etc",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ellipse120/base-api-layer.git"
+  },
+  "keywords": [
+    "nuxt-layer",
+    "tools"
+  ],
+  "author": "lusai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ellipse120/base-api-layer/issues"
+  },
+  "homepage": "https://github.com/Ellipse120/base-api-layer#readme"
 }
