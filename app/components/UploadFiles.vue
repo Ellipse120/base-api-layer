@@ -7,12 +7,12 @@ const formData = new FormData()
 
 const handleFilesChange = (event: Event) => {
   const inputRef = event.target as HTMLInputElement
-  const files = inputRef.files
+  const files = inputRef.files || []
 
   if (!files?.length) return
 
   for (let i = 0; i < files.length; i++) {
-    formData.append('file', files[i])
+    formData.append('file', files[i]!)
   }
 }
 

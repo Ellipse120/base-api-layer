@@ -1,7 +1,7 @@
 {
   "name": "@lusai/base-api-layer",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev .playground",
@@ -21,7 +21,7 @@
     "eslint": "^9.25.1",
     "happy-dom": "^17.4.4",
     "msw": "^2.7.5",
-    "nuxt": "^3.16.2",
+    "nuxt": "^4.0.0",
     "playwright-core": "^1.52.0",
     "typescript": "^5.8.3",
     "vitest": "^3.1.2",

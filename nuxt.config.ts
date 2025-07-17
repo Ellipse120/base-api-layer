@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxt/test-utils", "@nuxt/content"],
 
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
+
   nitro: {
     storage: {
       uploads: {
